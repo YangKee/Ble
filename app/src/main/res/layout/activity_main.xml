@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary">
+
+
+        <ProgressBar
+            android:id="@+id/pro"
+            android:layout_width="35dp"
+            android:indeterminateDrawable="@drawable/wait_load"
+            android:indeterminateOnly="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible"
+            android:indeterminateBehavior="repeat"
+            android:layout_height="35dp" />
+
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="安卓BLE"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/btn_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="16dp"
+            android:text="scan"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+
+    <ListView
+        android:id="@+id/list"
+        tools:listitem="@layout/item_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/colorAccent"
+        android:dividerHeight="1px">
+
+    </ListView>
+
+</LinearLayout>
